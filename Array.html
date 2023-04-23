@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Document</title>
+    <script type="text/javascript">
+        var a=new Array();
+        a.push(10);
+        a.push(40);
+        a.push(20);
+        a.push(30);
+        
+
+       for(var i=0;i<a.length;i++)
+        {
+            var max=a[0];
+            if(max<a[i])
+            {
+                max=a[i];
+            }
+        }
+        document.write(max+"<br>"); 
+
+        for(var i=0;i<a.length;i++)
+        {
+            for(var j=i+1;j<a.length;j++)
+            {
+                if(a[i]>a[j])
+                {
+                    var t=a[i];
+                    a[i]=a[j];
+                    a[j]=t;
+                }
+            }
+        }
+        document.write(a+"<br>");
+        a.shift();
+        document.write(a+"<br>");
+        var value=a.join("*");
+        document.write(value+"<br>");
+        a.unshift();
+        document.write(a+"<br>");
+        var l=a.push(52);
+         document.write(l+"<br>")
+         document.write(a+"<br>");
+        delete a[1];
+        document.write(a+"<br>");
+
+    </script>
+   
+</head>
+<body>
+    
+    
+</body>
+</html>

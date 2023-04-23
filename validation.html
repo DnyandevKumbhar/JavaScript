@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Document</title>
+    <script type="text/javascript">
+
+        function Validate()
+        {
+
+            if(document.mform.Email.value =="")
+            {
+            alert("Please provide your Email ID.");
+            document.mform.Email.focus();
+            return false;
+            }
+            else if(document.mform.Password.value=="")
+            {
+                alert("Please provide your Password ID.");
+                document.mform.Password.focus();
+                return false;
+            }
+            else if(document.mform.Email.value=="deva@gmail" && document.mform.Password.value=="Deva")
+            {
+                return true;
+            }
+            else
+            {
+                alert("Wrong ID and Password");
+                return false;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form action="msg.html" name="mform" onsubmit="return(Validate());">
+        <input type="text" placeholder="Email" name="Email"><br>
+        <input type="password" placeholder="Password" name="Password"><br>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
