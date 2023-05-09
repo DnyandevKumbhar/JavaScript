@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="./val.js">
+
+{
+ /* var em=document.getElementById("email").value;*/
+ var reg=/^([a-z0-9\._+])@([a-z0-9])+.([a-z]+)(.[a-z]+)?$/
+    if(reg.test(em))
+    {
+       var sp=document.getElementById("spn1");
+       sp.innerHTML="Invalid Email";
+       sp.style.color="white";
+    }
+   
+    
+
+    
+}
+</script>
+</head>
+<body class="b">
+    <form action="" onclick="" class="m">
+        <div class="d">
+        <div><input type="text" id="email" placeholder="Enter Email" onkeyup="vali(this.value)"> <span id="spn1"></span></div>
+        <div><input type="password" id="pass" placeholder="Enter Password"><span id="spn2"></span></div>
+        <div><input type="submit" id="sub" value="Register" class="btn"></div>
+    </div>
+    </form>
+
+</body>
+</html>
